@@ -85,7 +85,8 @@ namespace WeeklyTask_API.Services
             return Orders;
         }
 
-        // GET ListOrdersBySalesRepEmployeeNum
+        // GET ListOrdersBySalesRepEmployeeNumber
+
         public List<Order> ListOrdersBySalesRepEmployeeNum(int ID)
         {
             connection();
@@ -169,7 +170,7 @@ namespace WeeklyTask_API.Services
             return products;
         }
 
-        // GET : 
+        // GET : GetProductsByCustomerID
 
         public List<Order> GetProductsByCustomerID(int ID)
         {
