@@ -13,8 +13,8 @@ namespace WeeklyTask_API.Models
         public int Qty { get; set; }
         public int PriceEach { get; set; }
 
-        // public Order order { get; set; }
+        public Order order { get; set; }
 
-        // public Product product { get; set; }
+        public Product product { get; set; }
     }
 }

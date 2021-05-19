@@ -36,7 +36,7 @@ namespace WeeklyTask_API.Controllers
 
         // GET : OrderByName
 
-        [Route("Order/GetOrderByCustomerID")]
+        [Route("Order/GetOrderByCustomerID/1")]
         [HttpGet]
         [ActionName("GetOrderByCustomerID")]
         public JsonResult GetOrderByCustomerID(int ID)
@@ -48,7 +48,7 @@ namespace WeeklyTask_API.Controllers
 
         // GET : ListOrdersBySalesRepEmployeeNum
 
-        [Route("Order/ListOrdersBySalesRepEmployeeNum/2")]
+        [Route("Order/ListOrdersBySalesRepEmployeeNum/1")]
         [HttpGet]
         [ActionName("ListOrdersBySalesRepEmployeeNum")]
         public JsonResult ListOrdersBySalesRepEmployeeNum(int ID)
@@ -56,6 +56,42 @@ namespace WeeklyTask_API.Controllers
             var orders = Call_Func.ListOrdersBySalesRepEmployeeNum(ID);
             return Json(new { orders = orders }, JsonRequestBehavior.AllowGet);
         }
+
+        // GET : GetProductsByOrderID
+
+        [Route("Order/GetProductsByOrderID/2")]
+        [HttpGet]
+        [ActionName("GetProductsByOrderID")]
+        public JsonResult GetProductsByOrderID(int ID)
+        {
+            var pro = Call_Func.GetProductsByOrderID(ID);
+            return Json(new { pro = pro }, JsonRequestBehavior.AllowGet);
+        }
+
+        // GET : GetProductsByCustomerID
+
+        [Route("Order/GetProductsByCustomerID/2")]
+        [HttpGet]
+        [ActionName("GetProductsByCustomerID")]
+        public JsonResult GetProductsByCustomerID(int ID)
+        {
+            var pro = Call_Func.GetProductsByCustomerID(ID);
+            return Json(new { pro = pro }, JsonRequestBehavior.AllowGet);
+        }
+
+        // GET : ListOrdersByOfficeSales
+
+        [Route("Order/ListOrdersByOfficeSales/2")]
+        [HttpGet]
+        [ActionName("ListOrdersByOfficeSales")]
+        public JsonResult ListOrdersByOfficeSales(int ID)
+        {
+            var pro = Call_Func.ListOrdersByOfficeSales(ID);
+            return Json(new { pro = pro }, JsonRequestBehavior.AllowGet);
+        }
+
+
+
 
     }
 }
