@@ -41,13 +41,7 @@ namespace WeeklyTask_API.Services
 
         public List<Product> GetAllProductsByID(int ID)
         {
-            //List<Product> products = new List<Product>();
-            //connection();
-            //sqlCommand.CommandText = "select * from Product Left join Productline on Product.ProductlineID=Productline.ID";
-            //sqlCommand.Parameters.AddWithValue("@ID", ID);
-            //sqlConnection.Open();
-            //SqlDataReader dataReader = sqlCommand.ExecuteReader();
-
+            
             List<Product> products = new List<Product>();
             connection();
             string sample = "AllProductsByID";

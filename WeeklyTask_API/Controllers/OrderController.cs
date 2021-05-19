@@ -90,8 +90,5 @@ namespace WeeklyTask_API.Controllers
             return Json(new { pro = pro }, JsonRequestBehavior.AllowGet);
         }
 
-
-
-
     }
 }
