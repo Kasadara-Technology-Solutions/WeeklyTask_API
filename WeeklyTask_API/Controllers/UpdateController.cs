@@ -43,5 +43,25 @@ namespace WeeklyTask_API.Controllers
             return Created<Customer>("Created Successfully", customer);
         }
 
+        // UPDATE : Office 
+
+        [HttpPut]
+        [ActionName("UpdateOffice")]
+        public IHttpActionResult EditOffice([FromBody] Office office)
+        {
+            Call_Func.EditOffice(office);
+            return Created<Office>("Created Successfully", office);
+        }
+
+        // UPDATE : Employee 
+
+        [HttpPut]
+        [ActionName("EditEmployee")]
+        public IHttpActionResult EditEmployee([FromBody] Employee employee)
+        {
+            Call_Func.EditEmployee(employee);
+            return Created<Employee>("Created Successfully", employee);
+        }
+
     }
 }

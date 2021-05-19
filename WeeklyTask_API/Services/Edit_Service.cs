@@ -74,6 +74,46 @@ namespace WeeklyTask_API.Services
             sqlConnection.Close();
         }
 
+        // UPDATE : Office 
+        public void EditOffice(Office office)
+        {
+            connection();
+            string procedure = "EditCustomer";
+            sqlCommand.CommandText = procedure;
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@Code", office.ID);
+            sqlCommand.Parameters.AddWithValue("@City", office.City);
+            sqlCommand.Parameters.AddWithValue("@Phone", office.Phone);
+            sqlCommand.Parameters.AddWithValue("@Address1", office.Address1);
+            sqlCommand.Parameters.AddWithValue("@Address2", office.Address2);
+            sqlCommand.Parameters.AddWithValue("@State", office.State);
+            sqlCommand.Parameters.AddWithValue("@Country", office.Country);
+            sqlCommand.Parameters.AddWithValue("@PostalCode", office.PostalCode);
+            sqlCommand.Parameters.AddWithValue("@Territory", office.Territory);
+            sqlConnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+
+        // UPDATE : Employee
+        public void EditEmployee(Employee employee)
+        {
+            connection();
+            string procedure = "EditEmployee";
+            sqlCommand.CommandText = procedure;
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@Id", employee.ID);
+            sqlCommand.Parameters.AddWithValue("@OfficeCode", employee.OfficeCode);
+            sqlCommand.Parameters.AddWithValue("@reportsTo", employee.reportsTo);
+            sqlCommand.Parameters.AddWithValue("@LastName", employee.LastName);
+            sqlCommand.Parameters.AddWithValue("@FirstName", employee.FirstName);
+            sqlCommand.Parameters.AddWithValue("@Extension", employee.Extension);
+            sqlCommand.Parameters.AddWithValue("@Email", employee.Email);
+            sqlCommand.Parameters.AddWithValue("@JobTitle", employee.JobTitle);
+            sqlConnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
 
     }
 }
