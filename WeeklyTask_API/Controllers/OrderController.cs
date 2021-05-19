@@ -33,5 +33,29 @@ namespace WeeklyTask_API.Controllers
             var orders = Call_Func.GetOrderByID(ID);
             return Json(new { orders = orders }, JsonRequestBehavior.AllowGet);
         }
+
+        // GET : OrderByName
+
+        [Route("Order/GetOrderByCustomerID")]
+        [HttpGet]
+        [ActionName("GetOrderByCustomerID")]
+        public JsonResult GetOrderByCustomerID(int ID)
+        {
+            var orders = Call_Func.GetOrderByCustomerID(ID);
+            return Json(new { orders = orders }, JsonRequestBehavior.AllowGet);
+
+        }
+
+        // GET : ListOrdersBySalesRepEmployeeNum
+
+        [Route("Order/ListOrdersBySalesRepEmployeeNum/2")]
+        [HttpGet]
+        [ActionName("ListOrdersBySalesRepEmployeeNum")]
+        public JsonResult ListOrdersBySalesRepEmployeeNum(int ID)
+        {
+            var orders = Call_Func.ListOrdersBySalesRepEmployeeNum(ID);
+            return Json(new { orders = orders }, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

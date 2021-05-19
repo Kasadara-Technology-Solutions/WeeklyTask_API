@@ -35,7 +35,7 @@ namespace WeeklyTask_API.Controllers
 
         // GET : GetProductByName
 
-        [Route("Product/GetAllProductsByName/?Name=Sandeep")]
+        [Route("Product/GetAllProductsByName")]
         [HttpGet]
         [ActionName("GetProductByName")]
         public JsonResult Get(string Name)
