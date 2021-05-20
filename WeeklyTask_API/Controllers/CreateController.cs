@@ -62,7 +62,7 @@ namespace WeeklyTask_API.Controllers
             Call_Func.CreateOffice(office);
             return Created<Office>("Created Succesfully", office);
         }
-
+        
         // CREATE : Employee
 
         [HttpPost]
@@ -72,6 +72,6 @@ namespace WeeklyTask_API.Controllers
             Call_Func.CreateEmployee(employee);
             return Created<Employee>("Created Succesfully", employee);
         }
-
+        
     }
 }

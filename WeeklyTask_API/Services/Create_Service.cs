@@ -15,7 +15,6 @@ namespace WeeklyTask_API.Services
             string procedure = "AddOrder";
             sqlCommand.CommandText = procedure;
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            sqlCommand.Parameters.AddWithValue("@id", order.ID);
             sqlCommand.Parameters.AddWithValue("@CustomerId", order.CustomerID);
             sqlCommand.Parameters.AddWithValue("@OrderDate", order.OrderDate);
             sqlCommand.Parameters.AddWithValue("@RequiredDate", order.RequiredDate);
@@ -34,7 +33,6 @@ namespace WeeklyTask_API.Services
             string procedure = "AddProduct";
             sqlCommand.CommandText = procedure;
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            sqlCommand.Parameters.AddWithValue("@code", product.Code);
             sqlCommand.Parameters.AddWithValue("@ProductlineId", product.ProductlineID);
             sqlCommand.Parameters.AddWithValue("@Name", product.Name);
             sqlCommand.Parameters.AddWithValue("@Scale", product.Scale);
@@ -56,7 +54,6 @@ namespace WeeklyTask_API.Services
             string procedure = "AddCustomer";
             sqlCommand.CommandText = procedure;
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            sqlCommand.Parameters.AddWithValue("@Id", customer.ID);
             sqlCommand.Parameters.AddWithValue("@salesRepEmployeeNum", customer.salesRepEmployeeNum);
             sqlCommand.Parameters.AddWithValue("@Name", customer.Name);
             sqlCommand.Parameters.AddWithValue("@LastName", customer.LastName);
@@ -81,7 +78,6 @@ namespace WeeklyTask_API.Services
             string procedure = "AddPayment";
             sqlCommand.CommandText = procedure;
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            sqlCommand.Parameters.AddWithValue("@CheckNum", payment.CheckNum);
             sqlCommand.Parameters.AddWithValue("@CustomerId", payment.CustomerId);
             sqlCommand.Parameters.AddWithValue("@PaymentDate", payment.PaymentDate);
             sqlCommand.Parameters.AddWithValue("@Amount", payment.Amount);
@@ -97,7 +93,6 @@ namespace WeeklyTask_API.Services
             string procedure = "AddOffice";
             sqlCommand.CommandText = procedure;
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            sqlCommand.Parameters.AddWithValue("@Code", office.ID);
             sqlCommand.Parameters.AddWithValue("@City", office.City);
             sqlCommand.Parameters.AddWithValue("@Phone", office.Phone);
             sqlCommand.Parameters.AddWithValue("@Address1", office.Address1);
@@ -118,7 +113,6 @@ namespace WeeklyTask_API.Services
             string procedure = "AddEmployee";
             sqlCommand.CommandText = procedure;
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            sqlCommand.Parameters.AddWithValue("@Id", employee.ID);
             sqlCommand.Parameters.AddWithValue("@OfficeCode", employee.OfficeCode);
             sqlCommand.Parameters.AddWithValue("@reportsTo", employee.reportsTo);
             sqlCommand.Parameters.AddWithValue("@LastName", employee.LastName);
